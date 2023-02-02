@@ -28,9 +28,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 344483022923306147, guid: 473360f8a2340eb49be21094885fca1a,
     type: 3}
-  bulletSpeed: 25
+  bulletSpeed: 10
   playerShootSound: {fileID: 8300000, guid: 670bfd0b6ae8c624b8ffc40a6297b368, type: 3}
-  mousePos: {x: 0, y: 0, z: 0}
 --- !u!1001 &6985394726326850887
 PrefabInstance:
   m_ObjectHideFlags: 0

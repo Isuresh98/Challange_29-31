@@ -9,7 +9,6 @@ public class MitlyPlayerShoot : MonoBehaviour
     public float bulletSpeed = 10f;
     private AudioSource audioSource;
     public AudioClip playerShootSound;
-    public Vector3 mousePos;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +19,6 @@ public class MitlyPlayerShoot : MonoBehaviour
     void Update()
     {
         Shoot();
-        mousePos = Input.mousePosition;
     }
     private void Shoot()
     {
@@ -32,16 +30,12 @@ public class MitlyPlayerShoot : MonoBehaviour
                 audioSource.clip = playerShootSound;
                 audioSource.Play();
 
-                GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = transform.position * bulletSpeed;
-
-                Destroy(bullet, 2f);
-
+                bulatInsta();
             }
 
-
         }
-       else if (gameObject.tag == "Player2")
+
+        if (gameObject.tag == "Player2")
         {
             if (Input.GetKey(KeyCode.LeftControl))
 
@@ -49,15 +43,14 @@ public class MitlyPlayerShoot : MonoBehaviour
                 print("Shoot palyer2");
                 audioSource.clip = playerShootSound;
                 audioSource.Play();
-
-                GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = transform.position * bulletSpeed;
-                Destroy(bullet, 2f);
-
+                bulatInsta();
             }
-
-
         }
-
+    }
+    void bulatInsta()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        bullet.GetComponent<Rigidbody2D>().velocity = transform.position * bulletSpeed;
+        Destroy(bullet, 2f);
     }
 }

@@ -6,6 +6,8 @@ public class MaitiPlayerMovement : MonoBehaviour
 {
     public int DisplayScore;
     public float speed = 10f;
+    float horizontal;
+    float vertical;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,23 +21,19 @@ public class MaitiPlayerMovement : MonoBehaviour
     }
     private void Move()
     {
-        float horizontal;
-        float vertical;
+        
 
         if (gameObject.tag == "Player1")
         {
             horizontal = Input.GetAxis("Horizontal1");
             vertical = Input.GetAxis("Vertical1");
         }
-        else if (gameObject.tag == "Player2")
+        if (gameObject.tag == "Player2")
         {
             horizontal = Input.GetAxis("Horizontal2");
             vertical = Input.GetAxis("Vertical2");
         }
-        else
-        {
-            return;
-        }
+        
 
         Vector2 direction = new Vector2(horizontal, vertical);
         transform.position = transform.position + (Vector3)(direction * speed * Time.deltaTime);
