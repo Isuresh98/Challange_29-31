@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 8209235627253302150, guid: 45d073681b990234b8015e1cb1405841,
     type: 3}
-  bulletSpeed: 50
+  bulletSpeed: 3
   player: {fileID: 0}
   enemyShootSound: {fileID: 8300000, guid: 670bfd0b6ae8c624b8ffc40a6297b368, type: 3}
   shootTime: 2

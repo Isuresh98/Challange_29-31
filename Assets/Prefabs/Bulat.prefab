@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 344483022923306150}
   - component: {fileID: 344483022923306149}
   - component: {fileID: 344483022923306148}
+  - component: {fileID: -7690056445681828968}
   m_Layer: 0
   m_Name: Bulat
   m_TagString: Bulat
@@ -120,3 +121,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7690056445681828968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344483022923306147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b0e7483bf31a748ae6d1d0acb89bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

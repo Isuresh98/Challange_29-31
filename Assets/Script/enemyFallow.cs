@@ -7,11 +7,12 @@ public class enemyFallow : MonoBehaviour
     public float speed = 2.0f;
     public Transform player;
     public float stopDistance = 3.0f;
-  
+    
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
+       
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class enemyFallow : MonoBehaviour
         {
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
-          
+           
 
         }
     }

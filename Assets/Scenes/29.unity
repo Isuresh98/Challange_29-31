@@ -303,9 +303,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1117004522}
+  - component: {fileID: 1117004523}
   - component: {fileID: 1117004521}
   - component: {fileID: 1117004520}
-  - component: {fileID: 1117004523}
   - component: {fileID: 1117004525}
   - component: {fileID: 1117004524}
   m_Layer: 0
@@ -407,6 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9b606bca15232478b90f1dfada2861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DisplayScore: 0
   speed: 10
 --- !u!114 &1117004524
 MonoBehaviour:
