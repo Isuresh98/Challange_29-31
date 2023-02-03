@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class MaitiPlayerMovement : MonoBehaviour
 {
-    public int DisplayScore;
-    public float speed = 10f;
-    float horizontal;
-    float vertical;
+    public float Speed;
+    float horizontalInput;
+    float verticalInput;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,40 +18,22 @@ public class MaitiPlayerMovement : MonoBehaviour
     {
         Move();
     }
-    private void Move()
+   
+    void Move()
     {
-        
-
         if (gameObject.tag == "Player1")
         {
-            horizontal = Input.GetAxis("Horizontal1");
-            vertical = Input.GetAxis("Vertical1");
+            horizontalInput = Input.GetAxis("Horizontal1");
+            verticalInput = Input.GetAxis("Vertical1");
         }
         if (gameObject.tag == "Player2")
         {
-            horizontal = Input.GetAxis("Horizontal2");
-            vertical = Input.GetAxis("Vertical2");
+            horizontalInput = Input.GetAxis("Horizontal2");
+            verticalInput = Input.GetAxis("Vertical2");
         }
-        
 
-        Vector2 direction = new Vector2(horizontal, vertical);
-        transform.position = transform.position + (Vector3)(direction * speed * Time.deltaTime);
-    }
+        Vector2 direction = new Vector2(horizontalInput, verticalInput);
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ebulat"))
-        {
-            Destroy(this.gameObject);
-            Destroy(collision.gameObject);
-        }
-    }
-    public void UpdateScor(int DethCount)
-    {
-        DisplayScore += DethCount;
-        if (DisplayScore == 2)
-        {
-            speed *= 2;
-        }
+        transform.position = transform.position + (Vector3)(direction * Speed * Time.deltaTime);
     }
 }

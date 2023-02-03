@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7669677509880455087}
-  - component: {fileID: 7669677509880455084}
+  - component: {fileID: 2113382877}
   m_Layer: 0
   m_Name: SpownSet
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7669677509880455084
+--- !u!114 &2113382877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,14 +77,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9c85276da1b0843a6abf04cc1ed08c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1420301576434920591, guid: 3e0afc21925934e4d8e132be0a281b64,
+  _enemyPrefabs: {fileID: 1420301576434920591, guid: 3e0afc21925934e4d8e132be0a281b64,
     type: 3}
-  spawnPoints:
+  SpownPoints:
   - {fileID: 7669677510454019177}
   - {fileID: 7669677509939695725}
   - {fileID: 7669677508971188614}
   - {fileID: 7669677510738881753}
-  spawnTime: 2
+  SpownTime: 2
 --- !u!1 &7669677509939695724
 GameObject:
   m_ObjectHideFlags: 0

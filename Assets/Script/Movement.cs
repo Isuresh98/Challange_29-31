@@ -39,13 +39,13 @@ public class Movement : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
-    public void UpdateScor(int DethCount)
+    public void UpdateScore(int DethCount)
     {
         DisplayScore += DethCount;
         if (DisplayScore == 2)
         {
-            
-            speed *=2 ;
+            speed *= 2;
         }
     }
+   
 }

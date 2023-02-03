@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Enemy_Spown : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab;
-    public Transform[] spawnPoints;
-    public float spawnTime = 2f;
+    [SerializeField] private GameObject _enemyPrefabs;
+    public Transform[] SpownPoints;
+    public float SpownTime = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Spawn", spawnTime, spawnTime);
+        InvokeRepeating("Spown",SpownTime,SpownTime);
     }
 
     // Update is called once per frame
@@ -19,10 +20,11 @@ public class Enemy_Spown : MonoBehaviour
         
 
     }
-    void Spawn()
+    void Spown()
     {
-        int spawnIndex = Random.Range(0, spawnPoints.Length);
-        Transform spawnPoint = spawnPoints[spawnIndex];
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        int spownIndex = Random.Range(0, SpownPoints.Length);
+        Transform spownPoint = SpownPoints[spownIndex];
+        Instantiate(_enemyPrefabs, spownPoint.position, spownPoint.rotation);
     }
+   
 }

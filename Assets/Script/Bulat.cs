@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Bulat : MonoBehaviour
 {
-    private Movement PlayerScore;
+    private Movement playerScoreScript;
     public int DethCount;
-
     // Start is called before the first frame update
     void Start()
     {
-        PlayerScore = FindObjectOfType<Movement>();
+        playerScoreScript = FindObjectOfType<Movement>();
     }
 
     // Update is called once per frame
@@ -18,12 +17,13 @@ public class Bulat : MonoBehaviour
     {
         
     }
-   public void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             DethCount++;
-            PlayerScore.UpdateScor(DethCount);
+            playerScoreScript.UpdateScore(DethCount);
         }
     }
+
 }

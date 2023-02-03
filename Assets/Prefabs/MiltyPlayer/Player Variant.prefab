@@ -1,20 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &3933650377936224891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8265118188783032581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a6cca176a7a4ac4583b34bb8a804952, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayScore: 0
-  speed: 10
---- !u!114 &8049820663822324730
+--- !u!114 &2700492381463223557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26,10 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f755ceea8587c3449ce594a581ab3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 344483022923306147, guid: 473360f8a2340eb49be21094885fca1a,
+  BulatPrefabs: {fileID: 344483022923306147, guid: 473360f8a2340eb49be21094885fca1a,
     type: 3}
-  bulletSpeed: 10
-  playerShootSound: {fileID: 8300000, guid: 670bfd0b6ae8c624b8ffc40a6297b368, type: 3}
+  BulatSpeed: 10
+--- !u!114 &5867728886429548499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265118188783032581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6cca176a7a4ac4583b34bb8a804952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 25
 --- !u!1001 &2646962739428442225
 PrefabInstance:
   m_ObjectHideFlags: 0
